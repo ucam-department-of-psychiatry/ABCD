@@ -1,0 +1,11 @@
+function rgrep {
+  first=$1
+  shift
+  grep --color -I -r "$first" * "$@";
+}
+
+rgrep "finished without error at" > error_noerror.txt
+rgrep "mri_watershed Error:" >> error_watershed.txt
+rgrep "You are trying to re-run an existing subject with (possibly)" >> error_rerun.txt
+rgrep "ERROR: cannot find /rds-d4/project/rb643/rds-rb643-ukbiobank2/tempHPC/" >> error_missingfolder.txt
+rgrep "ERROR: FreeSurfer license file /home/rb643/Software/freesurfer/license.txt not found." >> error_license.txt
