@@ -1,5 +1,5 @@
 extractEuler_run <- function() {
-  filelist <- read.table('allsubs.txt')
+  filelist <- read.table('abcd_allsubs.txt')
   source("extractEuler.R")
 
   outp <- data.frame()
@@ -8,24 +8,25 @@ extractEuler_run <- function() {
     eid <- paste('sub-', i, sep = "")
     inputdir <-
       paste(
-        '/rds/project/rb643/rds-rb643-abcd/Data_Imaging',
+        '~/rds/rds-rb643-abcd/Data_Imaging',
         eid,
-        'ses-baseline-year1',
-        'surfaces',
+        'ses-baseline-year1/surfaces',
         eid,
         'surf',
         sep = .Platform$file.sep
       )
     if (file.exists(paste(inputdir,'/lh.orig.nofix',sep=""))) {
       print(eid)
-      tempOut <- extractEuler(inputdir, eid)
-      tempOut$oldID <- i
-      outp <- rbind(outp, tempOut)
+	try({
+      	tempOut <- extractEuler(inputdir, eid)
+      	tempOut$oldID <- i
+      	outp <- rbind(outp, tempOut)
+	})
     }
   }
 
   write.table(outp,
-              file = '/rds/project/rb643/rds-rb643-abcd/Scratch/Euler.csv',
+              file = '~/rds/rds-rb643-abcd/Data_Out/QC_Euler.csv',
               quote=FALSE,
               row.names = FALSE,
               col.names = TRUE,
