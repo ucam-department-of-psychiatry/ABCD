@@ -1,9 +1,9 @@
 # ABCD Code repository
 
 # About ABCD
+The ABCD Study is a landmark, longitudinal study of brain development and child health. Investigators at 21 sites around the country will measure brain maturation in the context of social, emotional and cognitive development, as well as a variety of health and environmental outcomes.
 
-
-Finally, we strongly encourage others in the Department to share in this resource so please feel free to get in touch with us and/or distribute this white paper draft to other within the Department you think might be interested.
+We strongly encourage others in the Department to share in this resource so please feel free to get in touch with us and/or distribute this white paper draft to other within the Department you think might be interested.
 
 Richard A.I. Bethlehem (rb643)    
 Varun Warrier (vw260)      
@@ -53,12 +53,7 @@ Phenotypic data is currently stored in **../Data_Phenotype/**. This folder conta
 #     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-01_bold.json
 #     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-01_bold.nii
 #     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-01_motion.tsv
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-02_bold.json
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-02_bold.nii
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-02_motion.tsv
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-03_bold.json
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-03_bold.nii
-#     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-03_motion.tsv
+#     │   ├── ...
 #     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-04_bold.json
 #     │   ├── <sub>_ses-baselineYear1Arm1_task-rest_run-04_bold.nii
 #     │   └── <sub>_ses-baselineYear1Arm1_task-rest_run-04_motion.tsv
@@ -81,7 +76,7 @@ Phenotypic data is currently stored in **../Data_Phenotype/**. This folder conta
 #         ├── <sub>native2nlmni_1mm.nii.gz
 #         └── <sub>nlmni2native_1mm.nii.gz
 #
-# ```
+```
 
 ## Structural imaging
 
