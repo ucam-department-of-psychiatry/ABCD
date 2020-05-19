@@ -3,17 +3,9 @@ extractMotionParams <- function(input, ...) {
   require(neurobase)
   require(dplyr)
   
-  moco_params = readLines(input)
-  moco_params = strsplit(moco_params, split = " ")
-  moco_params = sapply(moco_params, function(x) {
-    as.numeric(x[!(x %in% "")])
-  })
-  moco_params = t(moco_params)
-  colnames(moco_params) = paste0("MOCOparam", 1:ncol(moco_params)) #3 rotations, 3 translations
-  
-  mp = moco_params
-  moco_params <- as.data.frame(moco_params)
-  
+  moco_params = read.table(input, header = T)
+  mp = moco_params #3 rotations, 3 translations
+  mp$t_indx <- NULL
   #mp[, 1:3] = mp[, 1:3] * 50
   
   mp[,1]=mp[,1]*(pi*50/180)
