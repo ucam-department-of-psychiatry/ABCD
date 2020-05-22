@@ -6,7 +6,7 @@ basepath <- "/rds/project/rb643/rds-rb643-abcd/Data_Imaging"
 
 output <- data.frame()
 for (i in unique(df$NewID)) {
-  inputfile <- paste(basepath,i,'ses-baseline-year1','func',paste0(i,'_ses-baselineYear1Arm1_task-rest_run-02_motion.tsv'),sep = .Platform$file.sep)
+  inputfile <- paste(basepath,i,'ses-baseline-year1','func',paste0(i,'_ses-baselineYear1Arm1_task-rest_run-01_motion.tsv'),sep = .Platform$file.sep)
   if(file.exists(inputfile)){
     print(i)
     try({

@@ -88,5 +88,5 @@ Pipeline development, analyses, quality control and parcellations of these frees
 ### Structural Parcellation
 Freesurfer reconstructions have been parcellated using the *desikan killiany atlas*, our in-house *308 parcellation*, the *glasser parcellation*, the *scheaffer200* and *schaeffer400* parcellations and some more fine-grained parcellations (suggestions on which to include in future updates are welcome). All stats files for each respective parcellation can be found in the freesurfer **~/surfaces/{subID}/stats** subdirectory.
 
-## Diffusion weighted imaging
+### Diffusion weighted imaging
 As of May 2020 diffusion weighted data has been made available for approximately 10000 subjects. Minimally processed DTI data was used (include pre and post Eddy correction and gradient unwarping) and we subsequently used [FSLs dti fit](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) to reconstruct FA and MD maps and we used the [AMICO](https://github.com/daducci/AMICO) toolset to generate NODDI maps . The diffusion directory also contains parcellated files for FA, MD and NODDI for the same parcellation templates as mentioned above.
