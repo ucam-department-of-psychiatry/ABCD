@@ -5,7 +5,10 @@ Code used for post-processing and extraction of variables from pre-processed dat
 #### Site differences
 ![Site differences](/Figures/ABCD_QC.png)
 
+#### CT differences
+![CT differences](/Figures/ABCD_QC2.png)
 
+#### Site differences table
 <html>
 <head>
 <meta charset="utf-8" />
