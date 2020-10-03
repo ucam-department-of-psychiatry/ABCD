@@ -1,5 +1,18 @@
 # ABCD Code repository
 
+Table of Contents
+=================
+   * [About ABCD](#about-abcd)
+      * [How to access this resource](#how-to-access-this-resource)
+      * [Authorship, usage and acknowledgements](#authorship-usage-and-acknowledgements)
+      * [File and folder structure for imaging data](#file-and-folder-structure-for-imaging-data)
+      * [Structural imaging](#structural-imaging)
+         * [Freesurfer reconstruction](#freesurfer-reconstruction)
+         * [Structural Parcellation](#structural-parcellation)
+         * [Diffusion weighted imaging](#diffusion-weighted-imaging)
+
+
+
 # About ABCD
 The ABCD Study is a landmark, longitudinal study of brain development and child health. Investigators at 21 sites around the country will measure brain maturation in the context of social, emotional and cognitive development, as well as a variety of health and environmental outcomes.
 
@@ -20,7 +33,7 @@ If you are creating a new variable and would like to make it available for other
 
 Finally, when making use of this resource please acknowledge the following funding sources that continue to make storage and processing of this dataset possible in your publications:
 
-"This research was co-funded by the NIHR Cambridge Biomedical Research Centre and a Marmaduke Sheild grant to RAIB. The views expressed are those of the author(s) and not necessarily those of the NHS, the NIHR or the Department of Health and Social Care."
+"This research was co-funded by the NIHR Cambridge Biomedical Research Centre and a Marmaduke Sheild grant to Richard A.I. Bethlehem and Varun Warrier. The views expressed are those of the author(s) and not necessarily those of the NHS, the NIHR or the Department of Health and Social Care."
 
 
 ## File and folder structure for imaging data
@@ -60,9 +73,9 @@ Phenotypic data is currently stored in **../Data_Phenotype/**. This folder conta
 #     ├── proc_struct >> processed structural T1, warps to MNI, tissue maps etc.
 #     │   ├── <sub>_t1w_1mm_lMNI152_brain.nii.gz
 #     │   ├── <sub>_t1w_1mm_native_brain.nii.gz
-#     │   ├── <sub>t1w_1mm_nlMNI152_brain_pve_0.nii.gz
-#     │   ├── <sub>t1w_1mm_nlMNI152_brain_pve_1.nii.gz
-#     │   ├── <sub>t1w_1mm_nlMNI152_brain_pve_2.nii.gz
+#     │   ├── <sub>_t1w_1mm_nlMNI152_brain_pve_0.nii.gz
+#     │   ├── <sub>+t1w_1mm_nlMNI152_brain_pve_1.nii.gz
+#     │   ├── <sub>_t1w_1mm_nlMNI152_brain_pve_2.nii.gz
 #     │   └── <sub>_t1w_1mm_nlMNI152.nii.gz
 #     │   └── ...
 #     ├── segmentations >> fslfirst subocrtical segmentations
@@ -89,4 +102,4 @@ Pipeline development, analyses, quality control and parcellations of these frees
 Freesurfer reconstructions have been parcellated using the *desikan killiany atlas*, our in-house *308 parcellation*, the *glasser parcellation*, the *scheaffer200* and *schaeffer400* parcellations and some more fine-grained parcellations (suggestions on which to include in future updates are welcome). All stats files for each respective parcellation can be found in the freesurfer **~/surfaces/{subID}/stats** subdirectory.
 
 ### Diffusion weighted imaging
-As of May 2020 diffusion weighted data has been made available for approximately 10000 subjects. Minimally processed DTI data was used (include pre and post Eddy correction and gradient unwarping) and we subsequently used [FSLs dti fit](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) to reconstruct FA and MD maps and we used the [AMICO](https://github.com/daducci/AMICO) toolset to generate NODDI maps . The diffusion directory also contains parcellated files for FA, MD and NODDI for the same parcellation templates as mentioned above.
+As of May 2020 diffusion weighted data has been made available for approximately 10000 subjects. Minimally processed DTI data was used (include pre and post Eddy correction and gradient unwarping) and we subsequently used [FSLs dti fit](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) to reconstruct FA and MD maps and we used the [AMICO](https://github.com/daducci/AMICO) toolset to generate NODDI maps. The diffusion directory also contains parcellated files for FA, MD and NODDI for the same parcellation templates as mentioned above.
